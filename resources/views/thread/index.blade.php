@@ -7,7 +7,7 @@
                 <h3>Forum Threads</h3>
                 <div class="card">
                     @foreach($threads as $thread)
-                    <div class="card-header"><h4><a href="{{route('show.thread',$thread->id)}}">{{$thread->title}}</a></h4></div>
+                    <div class="card-header"><h4><a href="{{route('threads.show',$thread->id)}}">{{$thread->title}}</a></h4></div>
 
                     <div class="card-body">
                             <article>

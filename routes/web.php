@@ -20,8 +20,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile/{user}','UserController@index')->name('user.show');
 
-Route::get('/threads','ThreadsController@index');
-
-Route::get('/threads/{thread}','ThreadsController@show')->name('show.thread');
-
 Route::post('/threads/{thread}/replies','RepliesController@store')->name('reply.store');
+
+Route::resource('threads','ThreadsController');
