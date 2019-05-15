@@ -9,7 +9,7 @@ class Thread extends Model
     protected $guarded = [];
 
     public function path($routeSufix = '') {
-        return '/threads/'.$this->id.$routeSufix;
+        return '/threads/'.$this->channel->slug.'/'.$this->id.$routeSufix;
     }
     public function replies() {
         return $this->hasMany(Reply::class);
